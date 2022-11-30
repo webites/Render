@@ -2,12 +2,15 @@
 
 namespace Web\Inc\Render;
 
+require_once('RenderConfig.php');
+
 class RenderPart
 {
 
     static function name(string $part, string $type = 'html')
     {
-        require('res/templates_part/' . $part . '.' . $type);
+        // require('res/templates_part/' . $part . '.' . $type);
+        require(TEMPLATESFILES . $part . '.' . $type);
     }
     static function css(string|array $file, bool $cdn = false, bool $min = false, string $id = '')
     {
@@ -17,7 +20,7 @@ class RenderPart
             $m = '';
         }
         if ($cdn !== true) {
-            $c = './css/';
+            $c = CSSFILES;
             $f = '.css';
         } else {
             $c = '';
