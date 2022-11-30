@@ -12,7 +12,7 @@
 
 `RenderPart::name(<part>, <type>);`
 
-<part>
+\<part\>
 required
 
 Name of your part in folder with your templates parts.
