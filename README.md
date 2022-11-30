@@ -13,11 +13,13 @@
 `RenderPart::name(<part>, <type>);`
 
 \<part\>
-required
+
+**required**
 
 Name of your part in folder with your templates parts.
 
-<type>
-optional |  default = html
+\<type\>
+
+**optional** | default = html
 
 If you have not html template , for example php, set second parameter. But **remember** write good code.
