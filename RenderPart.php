@@ -9,7 +9,6 @@ class RenderPart
 
     static function name(string $part, string $type = 'html')
     {
-        // require('res/templates_part/' . $part . '.' . $type);
         require(TEMPLATESFILES . $part . '.' . $type);
     }
     static function css(string|array $file, bool $cdn = false, bool $min = false, string $id = '')
@@ -25,6 +24,7 @@ class RenderPart
         } else {
             $c = '';
             $f = '';
+            $m = '';
         }
         if (gettype($file) == 'string') {
             echo "<link id='" . $id . "' rel='stylesheet' href='" . $c . $file . $m . $f . "' />\n";

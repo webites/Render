@@ -23,3 +23,46 @@ Name of your part in folder with your templates parts.
 **optional** | default = html
 
 If you have not html template , for example php, set second parameter. But **remember** write good code.
+
+## Render CSS files
+
+`RenderPart::css(<file>, <cdn>, <min>, <id>)`
+
+\<file\>
+
+**required**
+
+Set up string or array with file name of your css file.
+For local files without `.css`, another filename.
+For CDN files full url.
+
+\<cdn\>
+
+**optional** | default = false
+
+If you set CDN files take here true
+
+\<min\>
+
+**optional** | default = false
+
+If you have minify file or files (for array) tak here true.
+This option is off for CDN.
+
+\<id\>
+
+**optional** | default = ''
+
+If you want identify you asset setup here.
+This option is off for arrays.
+
+## Render JS files from source
+
+`RenderPart::js_src(<url>)`
+
+\<url\>
+
+**required**
+
+Set url file or files from CDN for example.
+You can take it string or array, but must to be network files.
