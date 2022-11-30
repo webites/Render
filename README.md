@@ -74,4 +74,4 @@ You can check package.json too and run `composer update`
 
 ## Need a website?
 
-Check [Agencja interatywna Wrocław](https:/webites.pl/ "Agencja interatywna Wrocław").
+Check [Agencja interatywna Wrocław](https://webites.pl/ "Agencja interatywna Wrocław").
