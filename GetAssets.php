@@ -3,15 +3,9 @@
 namespace Web\Inc\Render;
 
 require_once('RenderConfig.php');
-require_once('RenderFunctions.php');
 
-class RenderPart
+class GetAssets
 {
-
-    static function name(string $part, string $type = 'html')
-    {
-        require(TEMPLATESFILES . $part . '.' . $type);
-    }
     static function css(string|array $file, bool $cdn = false, bool $min = false, string $id = '')
     {
         if ($min === true) {
@@ -28,24 +22,28 @@ class RenderPart
             $m = '';
         }
         if (gettype($file) == 'string') {
-            echo "<link id='" . $id . "' rel='stylesheet' href='" . $c . $file . $m . $f . "' />\n";
+            return "<link id='" . $id . "' rel='stylesheet' href='" . $c . $file . $m . $f . "' />\n";
         }
         if (gettype($file) == 'array') {
+            $return = '';
             foreach ($file as $item) {
-                echo "<link rel='stylesheet' href='" . $c . $item . $m . $f . "' />\n";
+                $return .= "<link rel='stylesheet' href='" . $c . $item . $m . $f . "' />\n";
             }
+            return $return;
         }
     }
 
     static function js_src(string|array $url)
     {
         if (gettype($url) == 'string') {
-            echo "<script src='" . $url . "'></script>\n";
+            return "<script src='" . $url . "'></script>\n";
         }
         if (gettype($url) == 'array') {
+            $return = '';
             foreach ($url as $item) {
-                echo "<script src='" . $item . "'></script>\n";
+                $return .= "<script src='" . $item . "'></script>\n";
             }
+            return $return;
         }
     }
 }

@@ -75,6 +75,12 @@ You can take it string or array, but must to be network files.
 
 The same parameters like in `**RenderPart::css**`
 
+### JS
+
+`GetAssets::js_src`
+
+The same parameters like in `**RenderPart::js_src**`
+
 ## Not working ?
 
 Check your namespaces and use syntax in files and check again.
