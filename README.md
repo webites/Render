@@ -67,6 +67,14 @@ This option is off for arrays.
 Set url file or files from CDN for example.
 You can take it string or array, but must to be network files.
 
+## Get code with CSS/JS without displaying
+
+### CSS
+
+`GetAssets::css`
+
+The same parameters like in `**RenderPart::css**`
+
 ## Not working ?
 
 Check your namespaces and use syntax in files and check again.
