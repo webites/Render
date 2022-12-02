@@ -6,7 +6,7 @@ require_once('RenderConfig.php');
 
 class GetAssets
 {
-    static function css(string|array $file, bool $cdn = false, bool $min = false, string $id = '')
+    static function css($file, bool $cdn = false, bool $min = false, string $id = '')
     {
         if ($min === true) {
             $m = '.min';
@@ -33,7 +33,7 @@ class GetAssets
         }
     }
 
-    static function js_src(string|array $url)
+    static function js_src($url)
     {
         if (gettype($url) == 'string') {
             return "<script src='" . $url . "'></script>\n";

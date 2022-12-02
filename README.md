@@ -81,6 +81,41 @@ The same parameters like in `**RenderPart::css**`
 
 The same parameters like in `**RenderPart::js_src**`
 
+## Hooks
+
+Places in templates where you make insert other code in each subpages.
+Useful to insert SEO meta tag and assets.
+SEO Meta tags generator : [SEO Meta tags generator](https://github.com/webites/SeoGenerator "SEO Meta tags generator").
+
+### Init the hook.
+
+Paste this code snippet into the PHP template.
+`<?php template_hook('<handle>'); ?>`
+
+\<handle>\
+
+**required** | string
+
+Name of your hook.
+
+### Paste the code into page
+
+Paste the SESSION variable into other page where you use template with hook.
+
+`$_SESSION['<handle>'] = <code>`
+
+\<handle>\
+
+**required** | string
+
+Name of your hook. The same like in hook register.
+
+\<code>\
+
+**required** | string
+
+String or code where in the void is string.
+
 ## Not working ?
 
 Check your namespaces and use syntax in files and check again.
